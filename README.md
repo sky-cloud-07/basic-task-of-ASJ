@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/fd051558-4073-47a1-b88c-00f9d3055194)# Basic Task Of ASJ/Firmansyah Teacher/11 Grade/
 Ini adalah contoh projek dasar untuk anak SMK jurusan TKJ dalam mata pelajaran Administrasi Sistem Jaringan (ASJ)
 
 # TUTORIAL KONFIGURASI DNS, FTP, FILE, WEB, DATABASE SERVER dan MAIL SERVER
