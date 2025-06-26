@@ -1,4 +1,4 @@
-# basic-task-of-ASJ
+![image](https://github.com/user-attachments/assets/fd051558-4073-47a1-b88c-00f9d3055194)# Basic Task Of ASJ/Firmansyah Teacher/11 Grade/
 Ini adalah contoh projek dasar untuk anak SMK jurusan TKJ dalam mata pelajaran Administrasi Sistem Jaringan (ASJ)
 
 # TUTORIAL KONFIGURASI DNS, FTP, FILE, WEB, DATABASE SERVER dan MAIL SERVER
@@ -154,187 +154,167 @@ User       anonymous      admin
 
 
 ## KONFIGURASI DATABASE SERVER
-apt-get install mysql-server mysql-client
-y
-masukin pw 12345678
-apt-get install phpmyadmin
-y
-centang apache2
-yes
-pw 12345678
-pergi ke tools vb, create vb host only adapter
-ke setting virtual network , di adapter 1, ubah nat jadi host only adapter 
-untuk promiscuous mode allow all. Cable harus connected. 
-Pergi ke control panel, ke network and sharing center. 
-Cari jaringan host only adapter. 
-Ubah ip nya menjadi 200.100.1.22, 200.100.1.23. lalu ok. 
+1. apt-get install mysql-server mysql-client
+2. y
+3. masukin pw 12345678
+4. apt-get install phpmyadmin
+5. y
+6. centang apache2
+7. yes
+8. pw 12345678
+9. pergi ke tools vb - create vb host only adapter
+10. ke setting, virtual network, di adapter 1, **ubah nat** jadi **host only adapter** 
+untuk **promiscuous** mode allow all. Cable harus **connected**. 
 
-Pergi ke winscp. Login sebagai ftp-host name 200.100.1.23
-Coba koneksi ke chrome. Coba login ke php. 
-lalu ke winscp. Pindahkan file wordpress zip dan surat zip . ubah surat zip menjadi rar. 
+11. Pergi ke control panel - ke network and sharing center. 
+Cari jaringan host only adapter
+Ubah ip nya menjadi _200.100.1.22, 200.100.1.23_. lalu ok. 
 
-Cd /fileftp/
-Ls
-Mv wordpress…  /var/www/
-Ls
-cd /var/www/
-Ls
-Apt-get install unzip 
-Unzip wordpress…..
-Cd wordpress/
-Cp wp-config-sample.php wp-config.php
-Nano wp-config.php
- 
-Cd /var/www/
-Ls
-Cd /fileftp/
-Ls
-Mv SURAT.rar /var/www/	
-Cd /var/www/
-Ls
-Apt-get install unzip 
-Ls
-Unzip SURAT.rar
-Ls
-Mysql -u root -p 
-Create database surat;
-Show databases;
-Exit;
-Cd /etc/apache2/sites-enabled/
-Ls
-Cp 000-default surat 
-Ls
-Nano surat, setelah var www, tambahkan surat. 
+12. Pergi ke winscp. Login sebagai ftp, host name 200.100.1.23
+13. Coba koneksi ke chrome. Coba login ke php. 
+14. Ke winscp. Pindahkan file wordpress zip dan surat zip ke direktori yang sudah dibuat. ubah surat **zip** menjadi _rar_. 
 
- 
-Cd /var/www/SURAT/HOME
-Nano koneksi.php 
- 
-Service apache2 restart
-Masuk Kembali ke chromenya, ke database, login aja, pilih surat di sebelah kiri, ke impor , chose file, db.surat lalu kirim 
-Tes dengan 
-200.100.1.23/SURAT/
+15. cd /fileftp/
+16. ls
+17. mv wordpress(tab) /var/www/
+18. ls
+19. cd /var/www/
+20. ls
+21. apt-get install unzip 
+22. unzip wordpress(tab)
+23. cd wordpress/
+24. cp wp-config-sample.php wp-config.php
+25. nano wp-config.php
 
+    ![image](https://github.com/user-attachments/assets/556e80df-df1f-4d26-b094-ce366644e396)
 
+26. cd /var/www/
+27. ls
+28. cd /fileftp/
+29. ls
+30. mv SURAT.rar /var/www/	
+31. cd /var/www/
+32. ls
+33. apt-get install unzip 
+34. ls
+35. unzip SURAT.rar
+36. ls
+37. mysql -u root -p
+38. create database surat;
+39. show databases;
+40. exit;
+41. cd /etc/apache2/sites-enabled/
+42. ls
+43. cp 000-default surat
+44. ls
+45. nano surat
+setelah var www, tambahkan surat. 
 
+ ![image](https://github.com/user-attachments/assets/4a09f8f6-8bf0-4a91-9bf7-dd264304024f)
 
-
+46. cd /var/www/SURAT/HOME
+47. nano koneksi.php
+48. service apache2 restart
+49. Masuk Kembali ke chromenya, ke database, login aja, pilih surat di sebelah kiri, ke impor , choose file, db.surat lalu kirim
+50. buka tab baru lalu tes 200.100.1.23/SURAT/
 
 
-KONFIGURASI MAIL SERVER
-Cd
-Nano /etc/apt/sources.list
-	Cek ada berapa dvd nya
-	Ctrl x
-Eject (untuk mengeluarkan recent dvd)
-Masukin dvd 3 
-Apt-cdrom ident 
-Apt-cdrom add
-Nano /etc/apt/sources.list
-Apt-get install postfix courier-imap courier-pop squirrelmail
-Y
-Ganti dvd 1
-Pilih ok 
-Internet site
-Mail.Urname.com
-Ganti dvd 2
-Enter
-Create the directories for web-based administration,  lalu yes
-Ganti dvd 3
-maildirmake /etc/skel/Maildir
-nano /etc/postfix/main.cf
-scrool paling bawah
-ketikkan 
+## KONFIGURASI MAIL SERVER
+1. cd
+2. nano /etc/apt/sources.list
+lalu cek ada berapa dvd nya. ctrl - x
+3. eject (untuk mengeluarkan recent dvd)
+4. _masukin dvd 3_
+5. apt-cdrom ident
+6. apt-cdrom add
+7. nano /etc/apt/sources.list
+8. apt-get install postfix courier-imap courier-pop squirrelmail
+9. y
+10. ganti dvd 1
+11. pilih ok
+12. _internet site_
+13. mail.yourname.com
+14. ganti dvd 2
+15. enter
+16. _create the directories for web-based administration_ pilih **yes**
+17. ganti dvd 3
+18. maildirmake /etc/skel/Maildir
+19. nano /etc/postfix/main.cf
+20. scrool paling bawah, lalu ketikkan
 home_mailbox = Maildir/
 dpkg-reconfigure postfix
-ok
-internet site
-mail.urname.com
-biarkan kosong 
-lalu periksa di depan nya ada mailnya engga
-force synchronous pilih no aja
-biarkan aja
-use procmail, pilih no juga
-biarkan aja 0
-lalu biarkan aja lagi 
-setting ipv4, ok 
-cd /etc/bind/
-ls
-nano db.urname
-di bagian bawah tambahkan 
-mail	IN	A	200.100.1.23
+21. **ok**
+22. _internet site_
+23. mail.yourname.com
+24. biarkan kosong
+25. periksa di bagian depan nya ada mail atau engga. (harus ada mail)
+26. _force synchronous_ pilih **no** aja
+27. kosongin aja
+28. _use procmail_ pilih **no** juga
+29. biarkan aja 0
+30. kosongin aja
+31. pilih IPV4, **ok**
+32. cd /etc/bind
+33. ls
+34. nano db.yourname
+35. di bagian bawah tambahkan
+    mail	IN	A	200.100.1.23
+36. cd /etc/apache2/sites-available/
+37. ls
+38. cp default mail
+39. ls
+40. nano mail
+41. baris **server alias** hapus aja semua
+42. di bagian server name. www - ganti jadi **mail**
+43. bagian documentroot /var/www ganti menjadi
+    documentRoot /usr/share/squirrelmail, begitu pula dengan bagian
+    direktori
 
-cd /etc/apache2/sites-available/
-ls
-cp default mail
-ls
-nano mail
-baris server alias hapus aja semua
-di bagian server name. www ganti jadi mail 
-bagian DocumentRoot /var/www	ganti menjadi     DocumentRoot /usr/share/squirrelmail
-di bagian directory ganti juga
+    ![image](https://github.com/user-attachments/assets/aaa55fb8-da2e-4799-a720-cad67e0f0756)
 
- 
+44. nano /etc/squirrelmail//apache.conf
+45. scrool kebawah, sesuiakan informasi seperti ini
 
-Nano /etc/squirrelmail//apache.conf
-Scrool kebawah 
-Sesuaikan informasi seperti ini 
- 
-Nano /etc/apache2/apache2.conf
-Scrool yang paling bawah, ketikkan
-Include /etc/squirrelmail/apache.conf
+     ![image](https://github.com/user-attachments/assets/fa495b8a-d4c9-49a3-ab0a-dcf422738b97)
 
+46. nano /etc/apache2/apache2.conf
+47. scrool paling bawah ketikkan
+48. _include /etc/squirrelmail/apache.conf_
+49. service postfix restart
+50. serice bind9 restart
+51. service apache2 restart
+52. service courier-imap restart
+53. ke chrome
+54. Masuk ke chrome
+55. 200.100.1.23/squirrelmail/src/redirect.php
+Pergi ke laman login
+56. Masuk Kembali ke linux untuk menambahkan user 
 
-Lalu masukkan syntax
-Service postfix restart
-Service bind9 restart 
-Service apache2 restart 
-Service courier-imap restart 
-
-
-Masuk ke chrome
-200.100.1.23/squirrelmail/src/redirect.php
-Pergi ke laman login 
-
-Masuk Kembali ke linux untuk menambahkan user 
-
-Adduser hanif1
-Pw. 12345678
-Fullname. Hanif1
-Sisanya kosongkan saja
+adduser hanif1
+pw. 12345678
+fullname. Hanif1
+sisanya kosongkan saja
 
 Masukkan lagi untuk 
-Adduser hanif2
-Pw.12345678
-Fullname. Hanif2
+adduser hanif2
+pw.12345678
+fullname. Hanif2
 Sisanya kosongkan saja
 
-Login di chrome sebagai user hanif1
-
-Pergi ke bagian compose
+57. Login di chrome sebagai user hanif1
+Pergi ke bagian **compose**
 Kirim pesan ke hanif2
-Dengan subject bebas. 
+Dengan subject **bebas.** 
 
 Lalu kirim pesan ngasal
 
 Sign out
 Lalu masuk sebagai user hanif2
 Liat pesan terkirim 
-Pilih string subject=menyapa
-Lalu balas dengan cara klik reply 
+Pilih **string subject=menyapa**
+Lalu balas dengan cara **klik reply**
 	
-Stelah itu liat apakah ada balas di user hanif1
-
-
-
-
-
-
-
-
-
-
-
+Stelah itu liat apakah ada balasan di user hanif1
 
 
 
