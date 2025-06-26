@@ -316,8 +316,4 @@ Liat pesan terkirim
 Pilih **string subject=menyapa**
 Lalu balas dengan cara **klik reply**
 	
-Stelah itu liat apakah ada balasan di user hanif1
-
-
-
-
+Setelah itu liat apakah ada balasan di user hanif1
