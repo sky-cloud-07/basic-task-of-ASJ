@@ -213,9 +213,12 @@ setelah var www, tambahkan surat.
 
 46. cd /var/www/SURAT/HOME
 47. nano koneksi.php
-48. service apache2 restart
-49. Masuk Kembali ke chromenya, ke database, login aja, pilih surat di sebelah kiri, ke impor , choose file, db.surat lalu kirim
-50. buka tab baru lalu tes 200.100.1.23/SURAT/
+
+    ![image](https://github.com/user-attachments/assets/749ceec9-dcf1-4b2a-ae78-7a7af873e499)
+	
+49. service apache2 restart
+50. Masuk Kembali ke chromenya, ke database, login aja, pilih surat di sebelah kiri, ke impor , choose file, db.surat lalu kirim
+51. buka tab baru lalu tes 200.100.1.23/SURAT/
 
 
 ## KONFIGURASI MAIL SERVER
